@@ -2109,7 +2109,7 @@ export default function App() {
           detected = {
             type: 'doors',
             title: 'Welcome, Your Highness.',
-            subtitle: 'The doors are waiting for you.',
+            subtitle: 'Reminders for My Favourite Sister 🎀.',
             buttonText: 'OPEN THE DOORS'
           };
         }
