@@ -38,9 +38,9 @@ const INITIAL_MEMORIES = [
   {
     id: 2,
     code: 'MEMORY 02',
-    title: 'You are incredibly intelligent.',
+    title: 'You are my favourite headache.',
     subtitle: 'Chapter II of the Royal Archives',
-    caption: 'Never forget how brilliant that mind of yours is.',
+    caption: 'Annoying sometimes, irreplaceable always. 😂❤️',
     date: 'Golden Afternoon Echoes',
     position: { x: 8.6, y: 4.5, z: 12, rotY: -Math.PI / 2 },
     viewPos: { x: 3.2, y: 4.4, z: 12 },
@@ -67,7 +67,7 @@ const INITIAL_MEMORIES = [
     title: 'You are prettier than you realise.',
     subtitle: 'Chapter IV of the Royal Archives',
     caption:
-      'And it’s not just about your appearance. "One thing I genuinely admire about you is your maturity. The way you understand things, handle situations and see beyond the obvious is something worth appreciating. You have a thoughtful side that makes you wiser than you probably give yourself credit for. Never lose that." 💗',
+      'And it’s not just about your appearance.💗Maybe the prettiness is in you brother',
     date: 'Timeless Horizons',
     position: { x: 8.6, y: 4.5, z: -4, rotY: -Math.PI / 2 },
     viewPos: { x: 3.2, y: 4.4, z: -4 },
@@ -78,9 +78,9 @@ const INITIAL_MEMORIES = [
   {
     id: 5,
     code: 'MEMORY 05',
-    title: 'You are effortlessly charming.',
+    title: 'You are stronger than you realise.',
     subtitle: 'Chapter V of the Royal Archives',
-    caption: 'You don’t even realise how lovely your presence is.',
+    caption: 'Never let a difficult day make you doubt yourself.',
     date: 'Forever & Always',
     position: { x: -8.6, y: 4.5, z: -12.5, rotY: Math.PI / 2 },
     viewPos: { x: -3.2, y: 4.4, z: -12.5 },
@@ -2132,7 +2132,7 @@ export default function App() {
         if (!detected && Math.hypot(cx - 0, cz - -26) < 8.5) {
           detected = {
             type: 'portrait',
-            title: 'Some princess wear tikas too.',
+            title: 'You are wonderfully unique.',
             subtitle: 'The Sovereign Portrait of Princess Astha',
             buttonText: 'INSPECT ROYAL PORTRAIT'
           };
@@ -2650,7 +2650,7 @@ export default function App() {
               THE ROYAL PORTRAIT HALL
             </p>
             <h3 className="text-lg sm:text-2xl font-bold text-[#f3e5ab] italic mb-4">
-              "Some princess wear tikas too."
+              "You're wonderfully unique.."
             </h3>
 
             <div className="mx-auto w-52 h-64 sm:w-64 sm:h-80 border-4 border-[#d4af37] bg-[#3b0a18] rounded-sm overflow-hidden shadow-[0_0_35px_rgba(212,175,55,0.3)] mb-5 flex items-center justify-center">
