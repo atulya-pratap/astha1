@@ -59,7 +59,7 @@ const INITIAL_MEMORIES = [
     viewPos: { x: -3.2, y: 4.4, z: 4 },
     themeColors: ['#3b0a18', '#f48fb1', '#fff8e7'],
     motif: 'beautiful',
-    imageUrl: './photo3.jpg'
+    imageUrl: './photo3.png'
   },
   {
     id: 4,
@@ -86,7 +86,7 @@ const INITIAL_MEMORIES = [
     viewPos: { x: -3.2, y: 4.4, z: -12.5 },
     themeColors: ['#2a0812', '#e6c65a', '#f8bbd0'],
     motif: 'crown',
-    imageUrl: './photo5.jpg'
+    imageUrl: './photo5.png'
   }
 ];
 
