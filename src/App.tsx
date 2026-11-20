@@ -156,7 +156,7 @@ const SCENE_WAYPOINTS = [
     shortLabel: 'Portrait',
     pos: { x: 0, y: 3.4, z: -21.5 },
     lookAt: { x: 0, y: 4.8, z: -30 },
-    description: 'The Sovereign Rotunda featuring Shruti’s centerpiece portrait.'
+    description: 'The Sovereign Rotunda featuring Astha’s centerpiece portrait.'
   },
   {
     id: 'garden',
@@ -180,7 +180,7 @@ const SCENE_WAYPOINTS = [
     shortLabel: 'Crown',
     pos: { x: 0, y: 3.1, z: -96.5 },
     lookAt: { x: 0, y: 2.9, z: -102.5 },
-    description: 'The Royal Pavilion where Princess Shruti claims her crown.'
+    description: 'The Royal Pavilion where Princess Astha claims her crown.'
   },
   {
     id: 'reveal',
@@ -664,7 +664,7 @@ function createRoyalPortraitTexture(loadedImg = null) {
 
   ctx.fillStyle = '#fdfbf7';
   ctx.font = 'bold 30px Georgia, serif';
-  ctx.fillText('PRINCESS SHRUTI', 300, 696);
+  ctx.fillText('PRINCESS Astha', 300, 696);
 
   ctx.fillStyle = '#e8b4bc';
   ctx.font = 'italic 15px Georgia, serif';
@@ -710,7 +710,7 @@ export default function App() {
   const [crownRevealCardOpen, setCrownRevealCardOpen] = useState(false);
 
   const [memories, setMemories] = useState(INITIAL_MEMORIES);
-  const [shrutiPortraitUrl, setShrutiPortraitUrl] = useState('./photo6.jpg');
+  const [AsthaPortraitUrl, setAsthaPortraitUrl] = useState('./photo6.jpg');
 
   const [isMuted, setIsMuted] = useState(false);
   const [musicVolume, setMusicVolume] = useState(0.55);
@@ -936,14 +936,14 @@ export default function App() {
     reader.readAsDataURL(file);
   };
 
-  const handleShrutiPortraitUpload = (file) => {
+  const handleAsthaPortraitUpload = (file) => {
     if (!file) return;
     const reader = new FileReader();
     reader.onload = (e) => {
       const dataUrl = e.target.result;
       const img = new Image();
       img.onload = () => {
-        setShrutiPortraitUrl(dataUrl);
+        setAsthaPortraitUrl(dataUrl);
         const portraitMesh = sceneObjectsRef.current.portraitMesh;
         if (portraitMesh) {
           const newTex = createRoyalPortraitTexture(img);
@@ -2133,7 +2133,7 @@ export default function App() {
           detected = {
             type: 'portrait',
             title: 'Some princess wear tikas too.',
-            subtitle: 'The Sovereign Portrait of Princess Shruti',
+            subtitle: 'The Sovereign Portrait of Princess Astha',
             buttonText: 'INSPECT ROYAL PORTRAIT'
           };
         }
@@ -2156,7 +2156,7 @@ export default function App() {
         if (!detected && Math.hypot(cx - 0, cz - -85.5) < 6.8) {
           detected = {
             type: 'letter',
-            title: 'TO: HER ROYAL HIGHNESS SHRUTI',
+            title: 'TO: HER ROYAL HIGHNESS Astha',
             subtitle: 'A wax-sealed royal letter rests upon the writing desk.',
             buttonText: 'OPEN ROYAL LETTER'
           };
@@ -2166,7 +2166,7 @@ export default function App() {
           detected = {
             type: 'crown',
             title: 'Every princess deserves her crown.',
-            subtitle: 'The Royal Pavilion of Princess Shruti',
+            subtitle: 'The Royal Pavilion of Princess Astha',
             buttonText: 'CLAIM YOUR CROWN'
           };
         }
@@ -2203,7 +2203,7 @@ export default function App() {
         <Crown className="w-16 h-16 text-[#d4af37] mb-4" />
         <h1 className="text-3xl font-bold text-[#f3e5ab] mb-2">THE DISNEY REGENCY</h1>
         <p className="max-w-md text-[#e8b4bc]">
-          Happy Princess Day, Your Highness Shruti! Please enable hardware acceleration (WebGL) in
+          Happy Princess Day, Your Highness Astha! Please enable hardware acceleration (WebGL) in
           your browser to explore your 3D Royal Palace.
         </p>
       </div>
@@ -2271,7 +2271,7 @@ export default function App() {
               THE DISNEY REGENCY
             </h1>
             <p className="text-base sm:text-xl italic text-[#d8a7b1] mb-6 sm:mb-8">
-              A Royal Experience for Princess Shruti
+              A Royal Experience for Princess Astha
             </p>
 
             <div className="max-w-xs mx-auto mb-6 sm:mb-8">
@@ -2339,7 +2339,7 @@ export default function App() {
             <button
               onClick={() => setCustomizerOpen(true)}
               className="flex items-center gap-1 px-2.5 py-1.5 rounded-sm border border-[#d4af37]/60 bg-[#3b0a18]/90 hover:bg-[#4a0e1e] text-[#f3e5ab] text-[10px] sm:text-xs tracking-wider uppercase transition cursor-pointer"
-              title="Upload Shruti's Portrait & Memory Photos"
+              title="Upload Astha's Portrait & Memory Photos"
             >
               <Camera className="w-3.5 h-3.5 text-[#d4af37]" />
               <span>Photos</span>
@@ -2654,10 +2654,10 @@ export default function App() {
             </h3>
 
             <div className="mx-auto w-52 h-64 sm:w-64 sm:h-80 border-4 border-[#d4af37] bg-[#3b0a18] rounded-sm overflow-hidden shadow-[0_0_35px_rgba(212,175,55,0.3)] mb-5 flex items-center justify-center">
-              {shrutiPortraitUrl ? (
+              {AsthaPortraitUrl ? (
                 <img
-                  src={shrutiPortraitUrl}
-                  alt="Princess Shruti Royal Portrait"
+                  src={AsthaPortraitUrl}
+                  alt="Princess Astha Royal Portrait"
                   onError={handleImgError}
                   className="w-full h-full object-cover"
                 />
@@ -2665,7 +2665,7 @@ export default function App() {
                 <div className="p-4 text-center">
                   <Crown className="w-12 h-12 text-[#f3e5ab] mx-auto mb-2" />
                   <p className="text-base font-bold text-[#fdfbf7]">HER ROYAL HIGHNESS</p>
-                  <p className="text-lg font-bold text-[#d4af37] mb-2">PRINCESS SHRUTI</p>
+                  <p className="text-lg font-bold text-[#d4af37] mb-2">PRINCESS Astha</p>
                 </div>
               )}
             </div>
@@ -2673,14 +2673,14 @@ export default function App() {
             <div className="flex flex-col sm:flex-row items-center justify-center gap-3">
               <label className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-5 py-2.5 bg-gradient-to-r from-[#b8860b] via-[#d4af37] to-[#b8860b] text-[#1a040a] font-bold text-xs tracking-widest uppercase rounded-sm cursor-pointer shadow-lg">
                 <Upload className="w-4 h-4" />
-                <span>Upload Shruti's Portrait</span>
+                <span>Upload Astha's Portrait</span>
                 <input
                   type="file"
                   accept="image/*"
                   className="hidden"
                   onChange={(e) => {
                     if (e.target.files?.[0]) {
-                      handleShrutiPortraitUpload(e.target.files[0]);
+                      handleAsthaPortraitUpload(e.target.files[0]);
                     }
                   }}
                 />
@@ -2752,12 +2752,12 @@ export default function App() {
                 <Crown className="w-6 h-6 sm:w-7 sm:h-7 text-[#f3e5ab]" />
               </div>
               <p className="text-[10px] sm:text-[11px] tracking-[0.25em] uppercase text-[#7a091e] font-bold text-center">
-                TO: HER ROYAL HIGHNESS SHRUTI
+                TO: HER ROYAL HIGHNESS Astha
               </p>
             </div>
 
             <div className="space-y-3.5 text-sm sm:text-lg leading-relaxed font-serif text-[#2c1810]">
-              <p className="font-bold text-lg sm:text-xl text-[#4a0e1e]">Dear Shruti,</p>
+              <p className="font-bold text-lg sm:text-xl text-[#4a0e1e]">Dear Astha,</p>
               <p>
                 Some people have a way of making even the simplest moments memorable. You're one of
                 those people.
@@ -2820,14 +2820,14 @@ export default function App() {
               THE ROYAL CORONATION
             </p>
             <h3 className="text-xl sm:text-3xl font-bold text-[#fdfbf7] mb-4">
-              Her Royal Highness Shruti
+              Her Royal Highness Astha
             </h3>
 
-            {shrutiPortraitUrl && (
+            {AsthaPortraitUrl && (
               <div className="mx-auto w-36 h-44 sm:w-44 sm:h-52 border-2 border-[#d4af37] rounded-sm overflow-hidden mb-4 shadow-[0_0_30px_rgba(212,175,55,0.4)]">
                 <img
-                  src={shrutiPortraitUrl}
-                  alt="Princess Shruti"
+                  src={AsthaPortraitUrl}
+                  alt="Princess Astha"
                   onError={handleImgError}
                   className="w-full h-full object-cover"
                 />
@@ -2865,7 +2865,7 @@ export default function App() {
               HAPPY PRINCESS DAY
             </h1>
             <h2 className="text-xl sm:text-4xl font-bold tracking-[0.16em] text-[#fdfbf7] mb-5">
-              PRINCESS SHRUTI
+              PRINCESS Astha
             </h2>
 
             <div className="w-20 h-0.5 bg-[#d4af37] mx-auto mb-5" />
@@ -2926,7 +2926,7 @@ export default function App() {
             </div>
 
             <p className="text-xs text-[#e8b4bc] italic mb-5">
-              Upload real photographs for Princess Shruti’s central portrait and the five Memory
+              Upload real photographs for Princess Astha’s central portrait and the five Memory
               Gallery frames. They immediately appear inside the 3D palace frames.
             </p>
 
@@ -2935,17 +2935,17 @@ export default function App() {
                 Scene V — Central Masterpiece Frame
               </div>
               <div className="text-sm font-bold text-[#fdfbf7] mb-3">
-                Princess Shruti’s Royal Portrait
+                Princess Astha’s Royal Portrait
               </div>
               <label className="inline-flex items-center gap-2 px-4 py-2 bg-[#d4af37] text-[#1a040a] font-bold text-xs tracking-wider uppercase rounded-sm cursor-pointer hover:bg-[#f3e5ab] transition">
                 <Upload className="w-3.5 h-3.5" />
-                <span>{shrutiPortraitUrl ? 'Change Portrait Photo' : 'Upload Portrait Photo'}</span>
+                <span>{AsthaPortraitUrl ? 'Change Portrait Photo' : 'Upload Portrait Photo'}</span>
                 <input
                   type="file"
                   accept="image/*"
                   className="hidden"
                   onChange={(e) => {
-                    if (e.target.files?.[0]) handleShrutiPortraitUpload(e.target.files[0]);
+                    if (e.target.files?.[0]) handleAsthaPortraitUpload(e.target.files[0]);
                   }}
                 />
               </label>
