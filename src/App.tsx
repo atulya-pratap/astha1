@@ -2752,31 +2752,26 @@ export default function App() {
                 <Crown className="w-6 h-6 sm:w-7 sm:h-7 text-[#f3e5ab]" />
               </div>
               <p className="text-[10px] sm:text-[11px] tracking-[0.25em] uppercase text-[#7a091e] font-bold text-center">
-                TO: HER ROYAL HIGHNESS Astha
+                TO: HER ROYAL HIGHNESS ASTHA
               </p>
             </div>
 
             <div className="space-y-3.5 text-sm sm:text-lg leading-relaxed font-serif text-[#2c1810]">
               <p className="font-bold text-lg sm:text-xl text-[#4a0e1e]">Dear Astha,</p>
               <p>
-                Some people have a way of making even the simplest moments memorable. You're one of
-                those people.
+               Some people become a part of your life, and some people have been there for almost your entire life. You're the second kind.
               </p>
               <p>
-                From your thoughtful way of looking at things to your brilliant little mind, from
-                your quick answers to your wonderfully unpredictable conversations, there's always
-                something that makes you unmistakably you.
+              From our childhood memories to our countless silly conversations, gossips, arguments and laughs, you've been my constant companion through almost everything.
               </p>
               <p>
-                And honestly, a princess who doesn't even know when her own Princess Day is deserves
-                a special announcement!
+                I may not say it often, but having you as my little sister is something I'll always be grateful for.
               </p>
               <p className="font-bold text-[#7a091e] text-lg sm:text-xl py-1">
-                Happy Princess Day, Your Highness.
+                Happy Princess Day, My Little Princess! 👑
               </p>
               <p>
-                May you always have reasons to smile, dreams worth chasing, adventures worth
-                remembering, and people who remind you how wonderful you are.
+                May you always keep smiling, chasing your dreams, being your crazy self, and making beautiful memories.
               </p>
               <div className="pt-3 text-right">
                 <p className="italic text-[#5c3a21]">With royal regards,</p>
